@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Test</title>
+        <!--        <script type="text/javascript"  src="http://code.jquery.com/jquery-1.12.0.min.js"></script>-->
+        <script type="text/javascript">
+
+            /* Valor mihnimo: 00:00:00
+             * Valor mahximo: 23:59:59
+             */
+            function maskHourMinSec(inputToFormat){
+                
+                var fullTime = inputToFormat.value;
+
+                fullTime = fullTime.replace(/\D/g, "");
+                fullTime = fullTime.replace(/(\d{2})(\d)/, "$1:$2");
+                fullTime = fullTime.replace(/(\d{2})(\d)/, "$1:$2");
+
+                //valida o primeiro dihgito da hora
+                if(fullTime.charAt(0) > 2){
+                    fullTime = "";
+                }
+                //valida a hora
+                if(fullTime.substring(0, 2) > 23){
+                    fullTime = "";
+                }
+                //valida o primeiro digito dos minutos
+                if(fullTime.substring(3, 4) > 5){
+                    fullTime = "";
+                }
+                //valida os minutos
+                if(fullTime.substring(3, 5) > 59){
+                    fullTime = "";
+                }
+                //valida o primeiro digito dos segundos
+                if(fullTime.substring(6, 7) > 5){
+                    fullTime = "";
+                }
+                //valida os segundos
+                if(fullTime.substring(6, 8) > 59){
+                    fullTime = "";
+                }
+                //se o valor digitado passar de 8 dihgitos diminui para 8
+                if(fullTime.length > 8){
+                    fullTime = fullTime.substring(0, 8);
+                }
+                //seta o valor do input com a hora formatada e validada.
+                inputToFormat.value = fullTime;
+            }
+
+            /* Valor mihnimo: 00:00
+             * Valor mahximo: 23:59
+             */
+            function maskHourMin(inputToFormat){
+
+                var fullTime = inputToFormat.value;
+
+                fullTime = fullTime.replace(/\D/g, "");
+                fullTime = fullTime.replace(/(\d{2})(\d)/, "$1:$2");
+
+                //valida o primeiro dihgito da hora
+                if(fullTime.charAt(0) > 2){
+                    fullTime = "";
+                }
+                //valida a hora
+                if(fullTime.substring(0, 2) > 23){
+                    fullTime = "";
+                }
+                //valida o primeiro digito dos minutos
+                if(fullTime.substring(3, 4) > 5){
+                    fullTime = "";
+                }
+                //valida os minutos
+                if(fullTime.substring(3, 5) > 59){
+                    fullTime = "";
+                }
+                //se o valor digitado passar de 5 dihgitos diminui para 8
+                if(fullTime.length > 5){
+                    fullTime = fullTime.substring(0, 5);
+                }
+                //seta o valor do input com a hora formatada e validada.
+                inputToFormat.value = fullTime;
+            }
+            function formatHourMinSec(inputToValidate){
+                if(inputToValidate.value.length == 1){
+                    inputToValidate.value = inputToValidate.value + "0:00:00";
+                }else if(inputToValidate.value.length == 2){
+                    inputToValidate.value = inputToValidate.value + ":00:00";
+                }else if(inputToValidate.value.length == 4){
+                    inputToValidate.value = inputToValidate.value + "0:00";
+                }else if(inputToValidate.value.length == 5){
+                    inputToValidate.value = inputToValidate.value + ":00";
+                }else if(inputToValidate.value.length == 7){
+                    inputToValidate.value = inputToValidate.value + "0";
+                }
+            }
+
+            function formatHourMin(inputToValidate){
+                if(inputToValidate.value.length == 1){
+                    inputToValidate.value = inputToValidate.value + "0:00";
+                }else if(inputToValidate.value.length == 2){
+                    inputToValidate.value = inputToValidate.value + ":00";
+                }else if(inputToValidate.value.length == 4){
+                    inputToValidate.value = inputToValidate.value + "0";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td><label>Horas, minutos e segundos</label></td>
+                <td><input type="text" onkeyup="maskHourMinSec(this);" onblur="formatHourMinSec(this);"/></td>
+            </tr>
+            <tr>
+                <td><label>Horas e minutos</label></td>
+                <td><input type="text" onkeyup="maskHourMin(this);" onblur="formatHourMin(this);"/></td>
+            </tr>
+        </table>
+    </body>
+</html>

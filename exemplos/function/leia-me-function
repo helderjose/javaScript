@@ -1,0 +1,59 @@
+
+
+11 - iife-mais-indicado.js
+Immediately-Invoked Function Expression.
+Usa o padrão IIFE, é o mais indicado.
+
+10.1 - constructor-function-02.js
+Usa constructor function para simular encapsulamento,
+variável public e private.
+
+
+10 - constructor-function.js
+Usa constructor function para simular encapsulamento
+
+
+9.1 - factory-function-02.js
+Evite esse, dê preferência para o IIFE.
+
+
+9 - factory-function-01.js
+Usa factory function para simular encapsulamento
+
+
+8 - objeto-simular-escopo.js
+
+
+7 parametro-extra.js
+Passando mais parâmetros do que o declarado na função.
+
+
+6 - objeto-this.js
+Função chamando this, o valor de this muda dependendo do contexto que é chamado.
+
+
+5 - funcao-dentro-funcao.js
+
+
+
+4 - funcao-parametro.js
+Passando uma função como parâmetro.
+Exemplo do produto com dois impostos diferentes.
+
+
+3 - var.js
+Função com variável, ex:
+var sum = function(){...}
+
+
+2 - default-value.js
+Função com valor padrão no argumento.
+function f1(value = true){...}
+
+1.2 - declaracao-02.js
+Declaração de funciton com var.
+
+1 - declaracao.js
+Declaração de function ex:
+function sum() {...}
+var sum = function() {...}

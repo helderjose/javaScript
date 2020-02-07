@@ -1,0 +1,21 @@
+<script type="text/javascript">
+    function testarNan(){
+        var num = document.frmNan.txtNum.value;
+        
+        if(num == "" || isNaN(num)){
+            alert("digite um número válido");
+            document.frmNan.txtNum.focus();
+        }
+        else{
+            alert("Número: "+ num);
+        }
+    }
+</script>
+<html>
+    <body>
+        <form name="frmNan" action="#" method="POST">
+            Número: <input type="text" id="txtNum" /> <br/>
+            <input type="button" value="Enviar" onclick="testarNan()"/>
+        </form>
+    </body>
+</html>

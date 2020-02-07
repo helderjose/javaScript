@@ -1,0 +1,249 @@
+.menu-toolbar
+  typo( 'bold', 1.4rem )
+  transition background-color 0.25s ease-in-out 0s
+  position fixed
+  top 0
+  left 0
+  margin 0 auto
+  width 100%
+  height 10.1rem
+  color #FFFFFF
+  fill #FFFFFF
+  z-index 9999
+  background rgba( 1, 2, 3, 0 ) url('../img/transparent.gif') !important
+
+  .menu
+    col( 1/2, gutter: 0 )
+    position relative
+    z-index 5
+    top 43px
+
+    > li
+      position relative
+      display inline-block
+      float left
+      margin-right 4rem
+      color #FFFFFF
+
+      &:first-child
+        margin-left 75px
+
+      &:last-child
+        margin-right 0
+
+    a
+      color inherit
+      text-decoration none
+
+  .cta
+    col(1/2)
+    transition opacity 0.25s ease-in-out 0s
+    float right
+    position relative
+    top 30px
+    right 20px
+    margin-top 0
+    max-width 390px
+    text-align left
+
+    .links
+      li
+        height 3.6rem
+
+    .btn
+      line-height 4rem
+      float none
+
+    .btn-empty
+      margin 0
+      line-height 3.6rem
+
+    .access-my-account
+      position relative
+      top 0
+      left 0
+      // animation
+      transition transform .5s .5s $easing-default,
+                 opacity .3s .5s $easing-default,
+                 color 0.25s 0s ease-in-out,
+                 background-color 0.25s 0s ease-in-out
+
+      // hide:behavior
+      opacity 0
+      transform translateY(-100%)
+      // reveal:behavior
+      .reveal &
+        opacity 1
+        transform translateY(0)
+
+    .open-my-account
+      position absolute
+      top 0
+      right 0
+      // animation
+      transition transform .5s .8s $easing-default,
+                 opacity .3s .8s $easing-default,
+                 color 0.25s 0s ease-in-out,
+                 background-color 0.25s 0s ease-in-out
+      // hide:behavior
+      opacity 0
+      transform translateY(-100%)
+      // reveal:behavior
+      .reveal &
+        opacity 1
+        transform translateY(0)
+
+  .macro
+    line-height 0
+    cursor pointer
+    position relative
+    display inline-block
+
+    &:before
+      content ''
+      transition width 0.25s ease-in-out
+      position absolute
+      bottom -13px
+      margin-left -2px
+      width 0%
+      height 2px
+      background-color rgba( 255, 255, 255, 0.3 )
+
+    &.checked-menu-item
+      color #FFFFFF
+
+    &:hover
+      > a
+        color $color-green-light
+
+        i
+          color color-green-light
+
+      &:before
+        width calc( 100% + 0.6rem )
+
+    a
+      position relative
+      z-index 10
+      padding-bottom 0.7rem
+      color inherit
+
+      i
+        top 4px
+
+    i
+      font-size 1.1rem
+      position absolute
+      top -5px
+      right -20px
+
+  /*----------  MQ .menu-toolbar  ----------*/
+
+  +below( 1130px )
+    height 6.1rem
+
+    .menu
+      display none
+
+  +below( 990px )
+    .cta
+      display none
+
+
+
+/*===============================
+=            SubMenu            =
+===============================*/
+
+.sub-menu
+  opacity 0
+  display none
+  position absolute
+  top 0
+  left 0
+  padding-top 4rem
+  width 17rem
+  line-height 1
+  cursor default
+
+  li
+    display block
+    padding 0 0 1rem 0
+    margin 0
+    width 100%
+
+    &:first-child
+      margin 0
+
+  a
+    transition color 0.25s ease-in-out 0s
+
+    &:hover
+      color $color-green-light
+
+
+
+/*================================
+=            Logotype            =
+================================*/
+
+.logotype
+  display inline-block
+  position absolute
+  top 30px
+  z-index 0
+  left 0
+  right 0
+  margin auto
+  z-index 100
+  text-align center
+  width 13.4rem
+  height 4.1rem
+  background url('../img/banco-original.svg') no-repeat
+  background-size 100% 38px
+  transform-origin 50% 50%
+  transition transform .4s $easing-default,
+             opacity .1s $easing-default
+  // opacity 0
+  // transform scale(3, 3)
+  // .reveal &
+  //   transition transform .5s .8s $easing-default,
+  //              opacity .3s .9s $easing-default
+  //   transform scale(1, 1)
+  //   opacity 1
+  //   display block
+
+  h1
+    position absolute
+    top 0
+    left 0
+    text-indent -9999px
+
+  /*----------  MQ .logotype  ----------*/
+
+  +below(990px)
+    top 10px
+
+
+
+/*======================================
+=            Useful classes            =
+======================================*/
+
+.overMenu
+  background-color rgba( 0, 0, 0, 0.6 ) !important
+
+.hide-menu
+  background-color rgba( 0, 0, 0, 0 ) !important
+
+  .menu,
+  .logotype,
+  .cta
+    opacity 0
+    visibility hidden
+
+.checked-menu-item
+  color $color-green-light
+
+  &:before
+    width calc( 100% + 0.6rem ) !important

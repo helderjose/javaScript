@@ -1,0 +1,16 @@
+<script type="text/javascript">
+    function multiplicar(){
+        var numDigitado = document.getElementById("txtNumero").value;
+        var result = numDigitado * 2;
+          document.getElementById("txtResult").value = "R$ " + result;
+        
+    }
+</script>
+<html>
+    <body>
+        <form name="frmExemplo" action="...." method="POST">
+            Número: <input type="text" id="txtNumero" onchange="multiplicar()"/> <br/>
+            Multiplicado por 2: <input type="text" id="txtResult" value="" readonly="readonly"/>
+        </form>
+    </body>
+</html>

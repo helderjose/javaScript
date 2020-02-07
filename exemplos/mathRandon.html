@@ -1,0 +1,49 @@
+<html>
+<body>
+
+<script type="text/javascript">
+
+// var a = Math.random();
+// document.write(a);
+// newLine();
+
+// Math.random() always returns a number lower than 1.
+for(var i = 0; i < 10; i++){
+    document.write(i + ": " + Math.random());
+    newLine();
+}
+newLine();
+
+
+// Math.random() used with Math.floor() can be used to return random integers.
+// returns a number between 0 and 10
+for(var i = 0; i < 10; i++){
+    document.write(i + ": " + Math.floor(Math.random() * 11));
+    newLine();
+}
+newLine();
+
+
+ 
+ // returns a number between 1 and 10
+ // Math.floor(Math.random() * 10) + 1
+ for(var i = 0; i < 10; i++){
+    document.write(i + ": " + (Math.floor(Math.random() * 10) + 1) );
+    newLine();
+}
+
+
+function newLine(repeat = 1){
+    if(repeat > 1){
+        ++repeat;
+    }
+    while(repeat > 0){
+        document.write("<br/>");
+        --repeat;
+    }
+}
+
+</script>
+
+</body>
+</html>

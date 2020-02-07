@@ -1,0 +1,5 @@
+https://www.w3schools.com/js/tryit.asp?filename=tryjs_output_write
+----------------------------
+
+Using document.write() after an HTML document is fully loaded, will delete all existing HTML:
+https://www.w3schools.com/js/tryit.asp?filename=tryjs_output_write_over

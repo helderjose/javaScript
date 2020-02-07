@@ -1,0 +1,29 @@
+<script type="text/javascript">
+    function testeOnblurNome(textoNome){
+        alert("Você digitou "+ textoNome+ " no campo Nome");
+    }
+    function validaIdade(idade){
+        
+        if(idade == ''){
+            alert('onblur com focus() não está funcionando');
+           document.frmExemplo.inputIdade.focus();
+        }
+        
+        }
+        
+        
+    
+    
+</script>
+<html>
+    <body>
+        <h1>Exemplo onblur</h1>
+        <h3>clique em um dos campos e depois clique em algum ludar da página</h3>
+        <form name="frmExemplo" action="..." method="POST" >
+           Nome: <input type="text" id="inputNome" onblur="testeOnblurNome(this.value)" /><br/>
+           Idade: <input type="text" id="inputIdade" onblur="validaIdade(this.value)" /><br/>
+           Cidade: <input type="text" id="inputCidade" />
+        </form>
+        
+    </body>
+</html>

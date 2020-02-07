@@ -1,0 +1,18 @@
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
+
+var myPromisse = Promise.resolve({
+  then: function(onFulfill, onReject){
+    setTimeout(function(){
+      console.log('no time out');
+      onFulfill("meu retorno");
+    }, 3000);
+    console.log('no promise then');
+  }
+});
+
+//console.log(a instanceof Promise);
+myPromisse.then(function(resposta){
+  console.log('\n\nresposta: '+ resposta);
+  console.log('fim do teste');
+});

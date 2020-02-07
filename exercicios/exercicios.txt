@@ -1,0 +1,10 @@
+- for
+Imprima de 1 até 10.
+
+- while
+Imprima de 1 até 10.
+
+- do while
+Imprima de 1 até 10.
+
+switch

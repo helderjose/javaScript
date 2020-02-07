@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <script type="text/javascript">
+            window.onload = function(){}
+//            alert("funcionando");
+            var st = "gato gato gato";
+            document.write(st + " : " + "string normal" + "<br>");
+            document.write(st.replace("o", "a") + " : substitui a primeira ocorrência"+ "<br>");
+            document.write(st.replace(/o/g,"a") + " : substitui todas as ocorrências");
+            
+            document.write("<br><br> REMOVENDO ESPAÇO DO INÍCIO E DO FIM DA STRING <br/>");
+            var palavra = "     cinco     ";
+            document.write(palavra + " = " + palavra.length);
+            document.write("<br>"+ palavra + " = " + palavra.replace(/^\s+|\s+$/g,""));
+        </script>
+    </body>
+</html>

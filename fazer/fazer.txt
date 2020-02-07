@@ -1,0 +1,10 @@
+math api
+pesquisar por math javascript.
+
+String api
+charAt()
+charCode()
+concat
+indexOf
+replace
+split

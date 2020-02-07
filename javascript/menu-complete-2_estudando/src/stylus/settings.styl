@@ -1,0 +1,64 @@
+body
+  // background-color #FFFFFF
+
+.svg object
+  position relative
+  z-index 1
+  +selection()
+    background-color transparent
+
+/*=================================
+=            typograpy            =
+=================================*/
+
+.title
+  typo('semi-bold', 4rem)
+  line-height 1.2
+  text-transform uppercase
+
+  p
+    line-height 1.1
+
+  b
+    font-size inherit
+    color inherit
+
+  /*----------  MQ .title  ----------*/
+
+  +mobile()
+    font-size 2.2rem
+
+.subtitle
+  typo( 'regular', 1.6rem )
+  line-height 1.2
+  margin-bottom 2.7rem
+
+  b
+    font-size inherit
+    color inherit
+
+  /*----------  MQ .subtitle  ----------*/
+
+  +mobile()
+    typo( 'semi-bold', 1.3rem )
+
+/*====================================
+=            Main WRAPPER            =
+====================================*/
+
+.page-section
+  position relative
+  height 100vh
+
+.wrap-content
+  center( 1200px, 2rem )
+  position relative
+  z-index 10
+  width 100%
+  height 100%
+  color inherit
+
+  .content
+    align()
+    center( 1200px, 2rem )
+    width 100%

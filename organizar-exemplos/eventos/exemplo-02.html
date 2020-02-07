@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <style>
+      div {
+        padding: 50px;
+        background-color: rgba(255, 0, 0, 0.2);
+        text-align: center;
+        cursor: pointer;
+      }
+    </style>
+
+
+    <div id="div1">
+      DIV 1
+      <div class="div2">DIV 2</div>
+    </div>
+
+    <p>
+      Dessa forma muda o elemento que dispara o evento.<br />
+      Use addEventListener para evitar isso.
+    </p>
+
+    <script>
+      document.querySelector('#div1').addEventListener("mouseover", function func(event) {
+        console.log("event.target ", event.target); // event.targe vai mudar entre div1 e div2
+        console.log("this         ", this); // o this sempre será o div1
+        console.log("------------------------------\n\n")
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+concat - Junta dois arraya, retornando a cópia dos dois.
+every - Retorna true se todos os elementos atenderem a função.
+filter - Filtra o array com base em uma função de filtro.
+forEach - Percorre o array, invocando uma função para cada elemento.
+indexOf - Retorna o índice do primeiro elemento encontrado.
+join - Cria uma String customizada com todos os elementos do array.
+lastIndexOf - Retorna o índice do último elemento encontrado.
+map - Transforma os elemento de um array.
+pop - Remove o último elemento do array, retornando-o.
+push - Adiciona um elemento no array, retornando o length.
+reduce - Acumula os elementos de um array.
+reverse - Inverte a ordem dos elementos do array.
+shift - Remove o primeiro elemento do array, retornando-o.
+some - Retorna true se um dos elementos atender a função.
+slice - Seleciona uma parte do array, retornando-a. (usado para remover um elemento do array)
+sort - Ordena os elementos do array com base em uma função.
+splice - Adiciona ou remove elementos de uma posição específica.
+toString - Converte o array em uma String.
+unshift - Adiciona elementos no início do array.
+valueOf - Retorna o próprio array.
+
+
+
+
+
+
+
+
+

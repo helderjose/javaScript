@@ -1,0 +1,3 @@
+contrutor new Date(2017, 1, 25) // com esse construtor mes começa em 0 = janeiro, 1 = fevereiro
+
+fazer uma biblioteca que some horas, minutos, segundos, dias etc, quando passar de 24 horas mudar o dia e etc.

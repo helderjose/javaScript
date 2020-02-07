@@ -1,0 +1,44 @@
+<script type="text/javascript">
+function validar(){
+    
+    validacao = document.FrmTestForm;
+    
+    if(validacao.txtNome.value == "")
+    {
+        alert("O campo Nome deve ser preenchido!");
+        document.FrmTestForm.txtNome.focus();
+    }
+    else if(validacao.txtIdade.value == "")
+        {
+            alert("O campo Idade deve ser preenchido");
+            document.FrmTestForm.txtIdade.focus();
+        }
+        else
+        {
+            //form.submit();
+            alert("nome: "+ document.FrmTestForm.txtNome.value +"\n"+  "Idade: "+ document.FrmTestForm.txtIdade.value);
+        }
+}
+</script>
+<style>
+    #divRecebDados{
+        height: 100px;
+        background-color: #D3D3D3;
+}
+</style>
+
+<html>
+<body onload = "document.FrmTestForm.txtNome.focus();">
+
+    <form name="FrmTestForm">
+        Nome: <input type="text" id="txtNome"/> <br/>
+        Idade: <input type="text" id="txtIdade"/><br/>
+        <input type="button" value="Confirmar" onclick="validar()"/>
+    </form>
+    <div id="divRecebDados">
+
+    </div>
+
+</body>
+</html>
+

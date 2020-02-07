@@ -1,0 +1,2 @@
+tentei fazer um exemplo que colocava o focus no campo de pois de fazer uma validação mas com 
+onblur o método focus() não deu certo.

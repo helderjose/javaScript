@@ -1,0 +1,40 @@
+Array.apply
+Array.from
+
+Olhar o exemplo do react, projet github-app-paginacao-03
+
+--------- arquivo com array --------
+'use strict'
+
+const pagination = ({ total, activePage }) => {
+  // ecs 5
+  // return Array.apply(null, { length: total }).map((_, i) => i + 1)
+
+  // ecs 6
+  return Array.from({ length: total }, (_, i) => i + 1)
+}
+
+export default pagination
+
+
+---------------- arquivo teste -----------------
+'use strict'
+
+import { expect } from 'chai'
+import pagination from './index'
+
+test('pagination should be a function', () => {
+  expect(pagination).to.be.a('function')
+})
+
+test('pagination({ total: 1, activePage: 1 }) should return [1]', () => {
+  const params = { total: 1, activePage: 1 }
+  const result = [1]
+  expect(pagination(params)).to.be.deep.equal(result)
+})
+
+test('pagination({ total: 2, activePage: 1 }) should return [1, 2]', () => {
+  const params = { total: 2, activePage: 1 }
+  const result = [1, 2]
+  expect(pagination(params)).to.be.deep.equal(result)
+})

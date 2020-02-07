@@ -1,0 +1,31 @@
+<style type="text/css" media="all">
+    h1 {
+        color:#3333FF;
+    }
+</style>
+<script type="text/javascript">
+    window.onload = function () {
+        document.getElementById('btn-vermelha').onclick = mudaCorVermelha;
+        document.getElementById('btn-verde').onclick = mudaCorVerder;
+    };
+
+    function mudaCorVermelha() {
+        document.getElementById('cor').style.color = '#FF0000';
+    }
+    ;
+
+    function mudaCorVerder() {
+        document.getElementById('cor').style.color = '#006600';
+    }
+    ;
+</script>
+
+
+<html>
+    <body>
+        <h1 id="cor">Cabeçalho muda de cor</h1>
+        <button type="button" id="btn-vermelha">Vermelha</button>
+        <button type="button" id="btn-verde">Verde</button>
+
+    </body>
+</html>

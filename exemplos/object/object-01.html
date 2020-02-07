@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script type="text/javascript">
+            function newLine(){
+                    console.log('');
+                }
+        </script>
+        <script type="text/javascript">
+
+        /*
+        __proto__ não é padrão e pode não funcionar em alguns interpretadores.
+        Use Object.getPrototypeOf e Object.setPrototypeOf.
+        També é possível utilizar Objetc.create para determinar o protótipo do objeto.
+        */
+
+        /*
+        apagar a propriedade de um objeto.
+        delete joao.sexo;
+
+        // Object.keys(objeto) mostra as propriedade de um objeto
+        console.log(Object.keys(pessoa))
+
+
+        imprimir as propriedades de um objeto usndo for in
+        for (var property in pessoa){
+            console.log(property);
+        }
+
+
+        verificar se o objeto tem uma propriedade
+        pessoa.hasOwnProperty(property)  não verifica no protótipo, só no objeto.
+        */
+
+            var homem = {
+                sexo: "masculino"
+            };
+
+            var joao = {
+                nome: "Joao",
+                idade: 20,
+                __proto__:homem
+            };
+
+            var pedro = {
+                nome: "Pedro",
+                idade: 18
+            };
+
+
+            // usando setPrototypeOf()
+            Object.setPrototypeOf(pedro, homem)
+
+            console.log(joao);
+            console.log(joao.sexo);
+            console.log(joao.__proto__);
+            console.log();
+
+            console.log(pedro);
+            console.log(pedro.sexo);
+            console.log(Object.getPrototypeOf(pedro));
+            console.log();
+
+            // Usando Object.create()
+            var jonas = Object.create(homem);
+            jonas.nome = "Jonas";
+            jonas.idade = 33;
+
+            console.log(jonas);
+            console.log(jonas.sexo);
+            console.log();
+
+
+        </script>
+
+    </head>
+    <body>
+    
+    </body>
+</html>

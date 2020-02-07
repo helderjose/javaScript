@@ -1,0 +1,55 @@
+<script type="text/javascript">
+    onload = document.FrmTestForm.txtNome.focus();
+function validar(){
+    
+    
+    if(document.FrmTestForm.txtNome.value == "")
+    {
+        alert("O campo Nome deve ser preenchido!");
+        document.FrmTestForm.txtNome.focus();
+    }
+    else if(document.FrmTestForm.txtIdade.value == "")
+        {
+            alert("O campo Idade deve ser preenchido");
+            document.FrmTestForm.txtIdade.focus();
+        }
+        else
+        {
+            alert("nome: "+ document.FrmTestForm.txtNome.value +"\n"+  "Idade: "+ document.FrmTestForm.txtIdade.value);
+//            recarregarSemParametro(); //descomentar essa linha para recarregar a página com os campo do formulario vazio
+
+            
+        }
+        
+        function recarregarSemParametro(){
+       var url = window.location.href;
+       if (url.indexOf("?") > -1 ){
+         url = url.substr(0,url.indexOf("?")).toLowerCase();
+       }
+       window.location = url;
+        }
+
+}
+</script>
+<style>
+    #divRecebDados{
+        height: 100px;
+        background-color: #D3D3D3;
+}
+</style>
+
+<html>
+<body onload = "document.FrmTestForm.txtNome.focus();">
+
+    <form name="FrmTestForm">
+        Nome: <input type="text" id="txtNome"/> <br/>
+        Idade: <input type="text" id="txtIdade"/><br/>
+        <input type="button" value="Confirmar" onclick="validar()"/>
+    </form>
+    <div id="divRecebDados">
+
+    </div>
+
+</body>
+</html>
+

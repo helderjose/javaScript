@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "nome": "Funalo",
+        "email": "fulano@gmail.com",
+        "idade": 30,
+        "blocked": true,
+        "telefones": [
+            {
+                "numero": "(17) 9999-9991",
+                "tipo": "claro"
+            },
+            {
+                "numero": "(11) 4444-4444",
+                "tipo": "fixo"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "nome": "Ciclano",
+        "email": "ciclano@gmail.com",
+        "idade": 27,
+        "blocked": false,
+        "telefones": [
+            {
+                "numero": "(18) 3333-3333",
+                "tipo": "fixo"
+            }
+        ]
+    }
+]

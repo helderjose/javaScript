@@ -1,0 +1,18 @@
+<script>
+    function testeOnblurNome(){
+        alert("clicou no campo nome!");
+    }
+    function testeOnblurIdade(){
+        alert("você clicou no campo idade!");
+    }
+</script>
+<html>
+    <body>
+        <h1>Exemplo onfocus</h1>
+        <h3>clique em um dos campos</h3>
+        <form name="frmExemplo" action="..." method="POST">
+           Nome: <input type="text" id="inputNome" onfocus="testeOnblurNome()" /><br/>
+           Idade: <input type="text" id="inputIdade" onfocus="testeOnblurIdade()" />
+        </form>
+    </body>
+</html>

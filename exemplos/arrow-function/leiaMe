@@ -1,0 +1,20 @@
+Links:
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+
+
+Exemplos:
+Exemplo no nodeJs, no console do navegador o resultado é diferente.
+~/programacao2/nodeJs/nodeJs/udemy-nodeJs/section-03
+
+
+tentar retornar uma string
+uma arrow function que retorna null ("return" está implícito, se eu colocar a palavra "return" dá erro)
+myFunction => null
+
+melhorar esse exemplo
+para retornar uma expressão precisa dos parênteses
+myFunction => (null)
+
+
+//essa usa chaves, precisa do return
+myFunction => { return null}

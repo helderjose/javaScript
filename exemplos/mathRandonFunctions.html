@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <script>
+
+
+        document.write(getRndInteger1(3, 5));
+        document.write("<br/>");
+        document.write(getRndInteger2(3, 5));
+
+        
+
+
+        // Always returns a random number between min (included) and max (excluded):
+        function getRndInteger1(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+        // Always returns a random number between min and max (both included):
+        function getRndInteger2(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+    </script>
+
+</body>
+
+</html>

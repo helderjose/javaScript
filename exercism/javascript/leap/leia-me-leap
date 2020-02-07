@@ -1,0 +1,42 @@
+exercism download --exercise=leap --track=javascript
+exercism submit ./leap.js
+
+
+
+Given a year, report if it is a leap year.
+
+The tricky thing here is that a leap year in the Gregorian calendar occurs:
+
+on every year that is evenly divisible by 4
+  except every year that is evenly divisible by 100
+    unless the year is also evenly divisible by 400
+
+For example, 1997 is not a leap year, but 1996 is. 1900 is not a leap year, but 2000 is.
+
+If your language provides a method in the standard library that does this look-up, pretend it doesn't exist and implement it yourself.
+Notes
+
+Though our exercise adopts some very simple rules, there is more to learn!
+
+For a delightful, four minute explanation of the whole leap year phenomenon, go watch this youtube video.
+https://www.youtube.com/watch?v=xX96xng7sAE
+
+
+-------------------------- tradução -----------------------------
+Dado um ano, relate se é um ano bissexto.
+
+O mais complicado aqui é que ocorre um ano bissexto no calendário gregoriano:
+
+em todos os anos que é uniformemente divisível por 4
+   exceto a cada ano que é divisível por 100
+     a menos que o ano seja igualmente divisível por 400
+
+Por exemplo, 1997 não é um ano bissexto, mas 1996 é. 1900 não é um ano bissexto, mas 2000 é.
+
+Se o seu idioma fornecer um método na biblioteca padrão que faz essa pesquisa, finja que ele não existe e implemente-o por conta própria.
+Notas
+
+Embora o nosso exercício adote algumas regras muito simples, há mais para aprender!
+
+Para uma deliciosa explicação de quatro minutos de todo o fenômeno do ano bissexto, assista a este vídeo do youtube.
+https://www.youtube.com/watch?v=xX96xng7sAE

@@ -1,0 +1,8 @@
+onunload 
+ Ao abandonar uma página, seja porque se clique em um link que nos leva a outra página ou porque se fecha a janela do navegador, se executa o evento onunload. 
+ Javascript 1.0
+------------------------------------
+
+fiz um teste que dava um alert quando fechava a página.
+obs: quando fechava a aba dava o alert, mas se o navegador fosse fechado não dava, mas acho que o
+evento e executado mesmo assim.(acho que dá para limpar o cookie por exemplo)

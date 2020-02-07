@@ -1,0 +1,8 @@
+Esse é para fazer com múltipla escolha (teórico)
+
+As linhas a seguim executam com sucesso?
+
+document.getElementById("demo").innerHTML = "Hello JavaScript"; 
+document.getElementById('demo').innerHTML = 'Hello JavaScript'; 
+
+Resp: sim

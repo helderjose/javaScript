@@ -1,0 +1,6 @@
+"subistituto para o animate do jquery"
+http://velocityjs.org/
+
+https://api.jquery.com/stop/
+
+http://www.pinceladasdaweb.com.br/blog/2009/06/08/jquery-como-evitar-problemas-com-animate/

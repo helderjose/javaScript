@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Test</title>
+        <!--        <script type="text/javascript"  src="http://code.jquery.com/jquery-1.12.0.min.js"></script>-->
+        <script type="text/javascript">
+            function minhaFuncao(elementoParaManipular){
+                console.log("elemento:" + elementoParaManipular);
+                console.log(elementoParaManipular);
+                console.log("id: " + elementoParaManipular.id);
+                console.log(elementoParaManipular.classList);
+                console.log("classes: " + elementoParaManipular.classList);
+                console.log(elementoParaManipular.classList[0]);
+                console.log(elementoParaManipular.classList[80]);
+                console.log(elementoParaManipular.value);
+            }
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td><label>Horas, minutos e segundos</label></td>
+                <td><input type="text" id="meuId" class="minhaClasse outraClasse" onkeyup="minhaFuncao(this);"/></td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,5 @@
+NaN é um valor não numérico.
+NaN = Not a Number
+EX: 
+palavra
+6,3

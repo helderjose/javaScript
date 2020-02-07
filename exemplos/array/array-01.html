@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script type="text/javascript">
+            function newLine(){
+                    console.log('');
+                }
+        </script>
+        <script type="text/javascript">
+
+            /*
+            No JS não existe array "de verdade" como nas outras linguagens.
+            Os arrays são apenas objetos especiais que oferecem meios para acessar e manipular suas propriedades por
+            meio de índices.
+            */
+
+            //maneiras de criar um array
+            var carros = [];
+            var carros2 = ["A", "B"];
+
+            //evite usar o operador new com array
+            var carros3 = new Array();
+            var carros4 = new Array("A", "B", "C");
+            var carros3 = new Array(10); //10 é o tamanho inicial. diferente das outas linguagens que seria tamanho máximo.
+            
+            var pessoas = [["0"]["Nome"], ["32"]["Maria"], ["43"]["Joao"], ["55"]["Jose"]];
+            
+            /*var myCars=new Array(); // regular array (add an optional integer)
+            myCars[0]="Saab";       // argument to control array's size)
+            myCars[1]="Volvo";
+            myCars[2]="BMW";
+            document.write(myCars[1]);*/
+
+            // verificar se é array
+            if(Array.isArray(myVar)){
+                console.log("é array");
+            }
+
+        </script>
+
+    </head>
+    <body>
+    
+    </body>
+</html>

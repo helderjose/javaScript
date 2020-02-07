@@ -1,0 +1,33 @@
+pode usar <script> no <head> no <body> ou nos dois e pode colocar quantas vezes quiser.
+
+ <script>
+document.getElementById("demo").innerHTML = "My First JavaScript";
+</script> 
+
+Old JavaScript examples may use a type attribute: <script type="text/javascript">.
+The type attribute is not required. JavaScript is the default scripting language in HTML.
+
+------------------------------------------------
+Placing scripts at the bottom of the <body> element improves the display speed, because script compilation slows down the display.
+
+<body>
+outros elementos html aqui
+<button type="button" onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+</script>
+
+</body>
+-----------------------------------
+
+Scripts can also be placed in external files:
+External scripts cannot contain <script> tags.
+<script src="myScript1.js"></script>
+<script src="myScript2.js"></script> 
+-----------------------------------------
+
+External References
+ <script src="https://www.w3schools.com/js/myScript1.js"></script> 

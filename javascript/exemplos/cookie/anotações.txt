@@ -1,0 +1,1 @@
+função navidator.cookieEnable  verifica se os cookies estão abilitados no navegador (exemplo charpter03 arquivo irock8.html use a cabeça javaScript)

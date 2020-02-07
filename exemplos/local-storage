@@ -1,0 +1,11 @@
+https://developer.mozilla.org/pt-BR/docs/Web/API/Storage/LocalStorage
+
+let userInfo = {
+  "name": "Maria"
+}
+
+localStorage.setItem('user', JSON.stringify(userInfo));
+
+JSON.parse( localStorage.getItem('user'));
+
+localStorage.removeItem('user');

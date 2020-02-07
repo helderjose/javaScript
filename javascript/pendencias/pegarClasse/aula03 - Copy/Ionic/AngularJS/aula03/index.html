@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        table{
+            border-collapse: collapse;
+        }
+        table td {
+            border: solid 1px;
+        }
+    </style>
+</head>
+
+<body ng-app="app" ng-controller="CllienteCtrl">
+
+    {{nome}}
+    <br/> {{cliente.nome}}
+    <br/>
+    <br/>
+
+    <table>
+        <th>
+            <tr>
+                <td>index</td>
+                <td>id</td>
+                <td>nome</td>
+                <td>blocked</td>
+                <td>first</td>
+                <td>last</td>
+                <td>odd</td>
+                <td>even</td>
+            </tr>
+        </th>
+        <tr ng-repeat="cli in clientes" ng-hide="cli.blocked">
+            <td>{{$index}}</td>
+            <td>{{cli.id}}</td>
+            <td>{{cli.nome}}</td>
+            <td>{{cli.blocked}}</td>
+            <td>{{$first}}</td>
+            <td>{{$last}}</td>
+            <td>{{$odd}}</td>
+            <td>{{$even}}</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

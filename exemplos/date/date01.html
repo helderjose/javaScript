@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script type="text/javascript">
+            function newLine(){
+                    console.log('');
+                }
+        </script>
+        <script type="text/javascript">
+
+            // new Date("2014/12/25"); // ok
+            // new Date("12/25/2014") ; // ok
+            // new Date("25/12/2014"); // Invalid Date
+
+            var hoje = new Date();
+            console.log(hoje);
+            console.log("Em milissegundos: " + hoje.getTime());
+            newLine();
+
+            
+            var natal = Date.parse("2014/12/25");
+            console.log(natal);
+            console.log(new Date(natal));
+            console.log(new Date("12/25/2014"));
+            console.log(new Date("25/122014")); // invalid date
+            newLine();
+
+
+            console.log("padrão RFC 2822");
+            console.log(new Date()); // padrão RFC 2822
+            console.log( new Date("Thu Dec 25 2014") );
+            console.log( new Date("Thu Dec 25 2014 10:30:00") );
+            newLine();
+
+            console.log("Padrão ISO 8601, sensível a time zone");
+            console.log(new Date("2014-12-25")); // vai criar com - 2 hs por causa do - 2 graus 
+            console.log(new Date("2014-12-25T10:30:00"));
+            console.log(new Date("2014-12-25T10:30:00Z"));
+            console.log(new Date("2014-12-25T10:30:00-02:00"));
+            newLine();
+
+            console.log("Criando Data passando como parâmetro a própria data");
+            console.log(new Date(2014, 11, 25));
+            console.log(new Date(2014, 11, 25, 10, 30, 00));
+
+        </script>
+
+    </head>
+    <body>
+    
+    </body>
+</html>

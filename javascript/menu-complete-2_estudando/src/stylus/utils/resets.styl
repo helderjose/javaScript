@@ -1,0 +1,58 @@
+/*==============================
+=            Resets            =
+==============================*/
+
+html
+  font-size 62.5%
+
+body
+  typo('regular', 1.4rem)
+  color $color-base
+  background-color #3C3C3C
+  text-rendering optimizeLegibility
+
+*,
+*:before,
+*:after
+  box-sizing border-box
+
+.svg
+  transition all 0.25s ease-in-out 0s
+  stroke inherit
+  width inherit
+  height inherit
+
+  object
+    width inherit
+    height inherit
+    pointer-events none
+
+ins
+  text-decoration none
+
+b
+  typo('bold', 1.6rem)
+  color #3C3C3B
+
+main
+  overflow-x hidden
+
+a
+  transition color 0.25s ease-in-out 0s
+  color $color-green
+  text-decoration none
+
+  &:hover
+    color $color-green-light
+
+p
+  line-height 1.6
+
+small
+  font-size 0.9rem
+
+strong
+  color $color-green
+
+h1
+  font-size 4rem

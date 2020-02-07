@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <style type="text/css">
+            body, input[type='text'], input[type='password']{
+                background-color: #f5f5f5;
+            }
+            body{
+                margin: 0;
+            }
+            #loginBox{
+                width: 90%;
+                margin: auto;
+                overflow: hidden;
+            }
+            label, input{
+                display: block;
+            }
+            label{
+                text-transform: uppercase;
+                font-size: 0.7em;
+                color: #34495e;
+            }
+            input[type='text'], input[type='password']{
+                width: 100%;
+                padding: 2px 7px 7px 2px;
+                margin-bottom: 25px;
+                border-top: 0;
+                border-right: 0;
+                border-bottom: solid 1px #34495e;
+                border-left: 0;
+                font-size: 1.2em;
+            }
+            input[type='password']{
+                margin-bottom: 40px;
+            }
+            input[type='text'], input[type='password'], input[type='submit']{
+                outline: none;
+            }
+            
+            input[type='submit'], #tituloPagina{
+                background-color: #3498db;
+            }
+
+            input[type='submit']{
+                width: 100%;
+                padding: 15px;
+                border: none;
+                border-radius: 6px;
+                color: #FFF;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+            input[type='submit']:active{
+                background-color: #2980b9;
+            }
+            #tituloPagina{
+                padding: 15px 0;
+                text-align: center;
+                color: #FFF;
+            }
+        </style>
+
+        <script type="text/javascript">
+            function cetralizaBlocoLogin() {
+                var body = document.body;
+                var tituloPagina = document.getElementById('tituloPagina');
+                var loginBox = document.getElementById('loginBox');
+                var loginBoxMarginTop = body.clientHeight - tituloPagina.clientHeight - loginBox.clientHeight;
+                
+                if(loginBoxMarginTop > 1){
+                    loginBoxMarginTop = loginBoxMarginTop / 2;
+                }else{
+                    loginBoxMarginTop = 0;
+                }
+                
+                loginBox.style.marginTop = loginBoxMarginTop + 'px';
+            }
+        </script>
+    </head>
+    <body onload="cetralizaBlocoLogin()" onresize="cetralizaBlocoLogin()">
+        <h1 id="tituloPagina">Login</h1>
+        <div id="loginBox">
+            <label for="userName">Usuário</label>
+            <input type="text" id="userName"/>
+            <label for="password">Senha</label>
+            <input type="password" id="password"/>
+            <input type="submit" value="Logar"/>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,1 @@
+se o formulário estiver preenchido corretamente podemos usar a função form.submit();

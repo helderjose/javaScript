@@ -1,0 +1,55 @@
+<!Doctype html>
+<html ng-app="app">
+
+<head>
+    <meta charset="utf-8" />
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+
+    <style>
+        .nome.ng-valid {
+            border-color: green;
+        }
+        
+        .nome.ng-invalid-required {
+            border-color: red;
+        }
+    </style>
+</head>
+
+<body ng-controller="FormCtrl">
+    <form name="formCliente" ng-submit="salvar()">
+        Nome
+        <br/>
+        <input type="text" name="nome" class="nome" ng-model="cliente.nome" required ng-minlength="3"/>
+        <!--<span ng-show="formCliente.nome.$invalid">Nome obrigatório!</span><br/>-->
+        <!--<span ng-show="formCliente.nome.$error.required">Nome obrigatório!</span><br/>-->
+        <span ng-show="formCliente.nome.$error.required">Nome obrigatório!<br/></span>
+        <span ng-show="formCliente.nome.$error.minlength">Mínimo 3 caracteres.<br/></span>
+        
+        <br/> e-mail
+        <br/>
+        <input type="text" name="email" ng-model="cliente.email"  id="teste" ng-vir/>
+        <br/> Nascimento
+        <br/>
+        <input type="date" name="nascimento" ng-model="cliente.nascimento" ng-focus="keyboard()"/>
+        <br/> Genero
+        <br/>
+        <select ng-model="cliente.genero" ng-options="g.id as g.label for g in generos">
+            <!--<option value="M">Masculino</option>
+            <option value="F">Feminino</option>-->
+        </select>
+        <br/>
+
+        <input type="checkbox" name="aceito"
+            ng-model="cliente.contrato" ng-true-value="'Sim'" ng-false-value="'Não'" /> Aceito o contrato...
+        <br/>
+
+        <input type="submit" value="Salvar" ng-disabled="formCliente.$invalid" />
+    </form>
+
+    <pre>{{clientes}}</pre>
+
+</body>
+
+</html>

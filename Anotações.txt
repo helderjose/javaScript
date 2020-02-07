@@ -1,0 +1,3 @@
+linkar para um arquivo .js separado o script vai para o cache da máquina do usuário, então se o código js for grande é melhor linkar pois ajuda no carregamento da página.
+
+https://hacks.mozilla.org/2015/06/power-surge-optimize-the-javascript-in-this-html5-game-using-firefox-developer-edition/

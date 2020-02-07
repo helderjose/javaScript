@@ -1,0 +1,3 @@
+camelCase - variável e função começa com a primeira letra minúscula
+CamelCase - objeto começa com a primeira letra maiuscula
+CAMELCASE - constantes são em letras maiúsculas

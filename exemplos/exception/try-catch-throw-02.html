@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script type="text/javascript">
+            function newLine(){
+                    console.log('');
+                }
+        </script>
+        <script type="text/javascript">
+
+            var car;
+
+            function printVar(varToPrint){
+                //se entrar no if o resto da função não é executada.
+                if(!varToPrint){
+                    throw "Variável vazia";
+                }
+                console.log(varToPrint);
+                console.log("fim do printVar()");
+            }
+
+            //printVar(car);
+
+            try{
+                printVar(car)
+            }catch(exception){
+                console.log("Error: " + exception);
+            }
+
+            console.log("fim")
+
+        </script>
+
+    </head>
+    <body>
+    
+    </body>
+</html>

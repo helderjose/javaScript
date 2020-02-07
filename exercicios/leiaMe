@@ -1,0 +1,7 @@
+Alguns exercícios podem ser executados no nodeJs outros apenas no navegador, está escrito no começo de cada arquivo
+
+Execute os arquivos .js com node
+node nomeArquivo.js
+
+
+As respostas estão no fim do arquivo

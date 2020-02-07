@@ -1,0 +1,1 @@
+onrisize é chamado toda vez que a janela do navegador é redimensionada

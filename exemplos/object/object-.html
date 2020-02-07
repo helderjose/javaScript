@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script type="text/javascript">
+
+            function newLine(){
+                console.log('');
+            }
+            // var pessoa = {};
+            var pessoa = {
+                nome: "Maria",
+                idade: 20,
+                telefone: null,
+                cpf: undefined,
+                endereco: {
+                    logradouro: "Av 9 de Julho",
+                    numero: 49,
+                    bairro: "centro"
+                }
+            };
+
+            console.log(typeof(pessoa));
+            newLine();
+
+            /*
+            Na anotação de array posso usar palavra reservada
+            pessoa["class"] = 59;
+            */
+
+            console.log(pessoa.nome);
+            console.log(pessoa["nome"]);
+            console.log(pessoa.endereco.bairro);
+            console.log(pessoa["endereco"]["bairro"]);
+            console.log(pessoa.endereco["bairro"]);
+            newLine();
+            
+
+            //pessoa.cor dos olhos = "azul"; //erro
+            pessoa["cor dos olhos"] = "azul";
+            console.log(pessoa["cor dos olhos"])
+            console.log(pessoa);
+            newLine();
+
+            for(var propriedade in pessoa){
+                console.log(propriedade);
+            }
+            newLine();
+
+            // apagar propriedade de um objeto
+            for(var propriedade in pessoa){
+                console.log(propriedade +" "+ pessoa[propriedade]);
+            }
+            newLine();
+            
+            delete pessoa.idade;
+            for(var propriedade in pessoa){
+                console.log(propriedade +" "+ pessoa[propriedade]);
+            }
+            newLine();
+
+
+        </script>
+
+    </head>
+    <body>
+    
+    </body>
+</html>

@@ -1,0 +1,42 @@
+https://www.w3schools.com/jsref/jsref_obj_array.asp
+https://www.w3schools.com/js/js_array_methods.asp
+
+Exercícios no fim da página
+https://www.w3schools.com/js/js_arrays.asp
+
+
+No JS não existe array "de verdade" como nas outras linguagens.
+Os arrays são apenas objetos especiais que oferecem meios para acessar e manipular suas propriedades por
+meio de índices.
+
+
+--------------------
+----- some -----
+--------------------
+https://www.w3schools.com/jsref/jsref_some.asp
+
+Checks if any of the elements in an array pass a test (provided as a function).
+Return: A Boolean. Returns true if any of the elements in the array pass the test, otherwise it returns false.
+JavaScript Version: 	ECMAScript 3
+
+
+--------------------
+----- push -----
+--------------------
+https://www.w3schools.com/jsref/jsref_push.asp
+Adds new items to the end of an array, and returns the new length.
+
+
+--------------------
+----- unshift -----
+--------------------
+https://www.w3schools.com/jsref/jsref_unshift.asp
+Add new items to the beginning of an array.
+This method changes the length of an array.
+
+
+--------------------
+----- valueOf -----
+--------------------
+https://www.w3schools.com/jsref/jsref_valueof_array.asp
+The valueOf() method returns the array.

@@ -1,0 +1,1 @@
+http://javascriptbrasil.com/2013/10/12/entenda-closures-no-javascript-com-facilidade/

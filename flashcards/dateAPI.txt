@@ -1,0 +1,23 @@
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date
+
+getDate - Retorna o dia.
+getDay - Retorna o dia da semana.
+getFullYear - Retorna o ano.
+getHours - Retorna as horas.
+getMilliseconds - Retorna os milisegundos.
+getMinutes - Retorna os minutos.
+getMonth - Retorna o mês.
+getSeconds - Retorna os segundos.
+getTime - Retorna a data em milisegundos.
+toString - Retorna a data em String.
+
+
+
+
+
+
+
+
+
+
+

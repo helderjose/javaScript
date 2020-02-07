@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            window.onload = function () {
+                //document.getElementById("btn1").onclick = mudarCor;
+                //console.log(document.getElementsByTagName("input"));
+                
+                /* atribui a funcao mudarCor a todos os botoes do tipo button*/
+                var inputs = document.getElementsByTagName("input");
+                for(var i = 0; i < inputs.length; i++){
+                    if(inputs[i].type === "button"){
+                        inputs[i].onclick = mudarCor;
+                    }
+                }
+            };
+
+            function mudarCor() {
+                var corpo = document.body;
+                console.log(corpo.style.backgroundColor);
+                corpo.style.backgroundColor = corpo.style.backgroundColor === "red" ? "yellow" : "red";
+                console.log("Depois: " + corpo.style.backgroundColor);
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" value="click"/>
+        <input type="button" value="click"/>
+    </body>
+</html>

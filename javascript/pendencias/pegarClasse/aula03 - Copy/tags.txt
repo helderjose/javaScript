@@ -1,0 +1,4 @@
+ng-repeat
+ng-hide
+ng-show
+ng-class

@@ -1,0 +1,17 @@
+x = 5 + 5;
+y = "5" + 5;
+z = "Hello" + 5;
+
+resposta
+10
+55
+Hello5
+-------------------------
+
+https://www.w3schools.com/js/js_datatypes.asp
+pesquisar por: Difference Between Undefined and Null
+------------------
+
+
+'abc' === "abc"
+------------

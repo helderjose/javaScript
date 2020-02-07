@@ -1,0 +1,27 @@
+<script type="text/javascript">
+    function trocarImagem(escolha){
+        if(escolha == 1){
+            document.getElementById("imagem").src = "img1.jpg";
+        }
+        else if(escolha == 2){
+            document.getElementById("imagem").src = "img2.jpg";
+        }
+        else if(escolha == 3){
+            document.getElementById("imagem").src = "img3.jpg";
+        }
+    }
+</script>
+
+
+
+<html>
+    <body>
+        <div>
+            <img id="imagem" src="padrao.jpg" alt="" /><br />
+            Clique:
+            <input type="button" id="btn1" value="Imagem 1" onclick="trocarImagem(1)" />
+            <input type="button" id="btn2" value="Imagem 2" onclick="trocarImagem(2)" />
+            <input type="button" id="btn3" value="Imagem 3" onclick="trocarImagem(3)" />
+        </div>
+    </body>
+</html>

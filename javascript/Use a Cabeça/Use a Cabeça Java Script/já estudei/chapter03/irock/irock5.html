@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>iRock - The Virtual Pet Rock</title>
+
+    <script type="text/javascript">
+      var userName;
+
+      function resizeRock() {
+        document.getElementById("rockImg").style.height = (document.body.clientHeight - 100) * 0.9;
+        
+        /*
+         *(document.body.clientHeight - 100) * 0.9
+         *document.body.clientHeight -> a altura da janela do cliente
+         * menos 100 pixels
+         * 0.9 90% do que restou verticalmente
+         **/
+      }
+
+      function greetUser() {
+        alert('Hello, I am your pet rock.');
+      }
+
+      function touchRock() {
+        if (userName) {
+          alert("I like the attention, " + userName + ". Thank you.");
+        }
+        else {
+          userName = prompt("What is your name?", "Enter your name here.");
+          if (userName)
+            alert("It is good to meet you, " + userName + ".");
+        }
+        document.getElementById("rockImg").src = "rock_happy.png";
+        //setTimeout("document.getElementById('rockImg').src = 'rock.png';", 5 * 60 * 1000);
+        
+        //alterando o exemplo para 3 segundos
+        setTimeout("document.getElementById('rockImg').src = 'rock.png';", 3000);
+      }
+    </script>
+  </head>
+
+  <body onload="resizeRock(); greetUser();">
+    <div style="margin-top:100px; text-align:center">
+      <img id="rockImg" src="rock.png" alt="iRock" style="cursor:pointer" onclick="touchRock();" />
+    </div>
+      
+      <!-- a rocha fica do tamanho da janela do navegador -->
+  </body>
+</html>

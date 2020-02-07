@@ -1,0 +1,9 @@
+http://www.w3schools.com/js/js_examples.asp
+
+
+
+
+fiz todos os exemplos
+
+
+navigator.usrAgent (vê qual navegador está sendo usado)

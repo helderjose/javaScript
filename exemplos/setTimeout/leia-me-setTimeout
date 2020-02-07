@@ -1,0 +1,17 @@
+setTimeout, clearTimeout.
+Olhar também setInterval.
+
+6 - params-02.js
+    - funciona em qualquer browser.
+
+
+5 - params-01.js
+    - desse jeito não funciona no IE9 ou mais antigo.
+
+4 - count-forever.js
+
+3 - clearTimeout.js
+
+2 - setTimeout-named-function.js
+
+1 - setTimeout.js

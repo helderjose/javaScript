@@ -1,0 +1,100 @@
+ <script type="text/javascript">
+
+ 	/*
+ 	Recebe uma data no formato DD/MM/YYYY
+ 	Retorna true se a data for válida.
+ 	Retorna false se a data for inválida.
+ 	*/
+ 	function validarData( dataValidar ){
+
+ 		var dataDigitada;
+ 		var dataAux;
+ 		var partesData = dataValidar.split("/");
+ 		var diaDigitado = partesData[0];
+ 		var mesDigitado = partesData[1];
+ 		var anoDigitado = partesData[2];
+
+ 		mesDigitado--; //tira 1 porque os meses começam em 0 no javascript.
+ 		dataDigitada = new Date(anoDigitado, mesDigitado, diaDigitado);
+ 		dataAux = new Date( anoDigitado, mesDigitado );
+
+ 		if( (mesDigitado < 0) || (mesDigitado > 11) ){
+	    	return false;
+	    }
+
+	    if( (dataDigitada.getFullYear() != dataAux.getFullYear()) || (dataDigitada.getMonth() != dataAux.getMonth()) ){
+	    	return false;
+	    }
+
+	    return true;
+
+ 	}
+
+ 	
+ 	/*
+ 	Recebe uma data no formato DD/MM/AAAA
+ 	Retorna um número inteiro positivo, negativo ou 0.
+ 	Se a data for inválida retorna 0.
+ 	Se a data for 29/09 o cálculo é feito com 28/02
+ 	*/
+ 	function calcularIdade( dataNascimento ){
+
+ 		var dataNascimentoAux = dataNascimento.split("/");
+ 		var diaNascimento = dataNascimentoAux[0];
+ 		var mesNascimento = dataNascimentoAux[1];
+ 		var anoNascimento = dataNascimentoAux[2];
+ 		var hoje = new Date();
+ 		var idade = hoje.getFullYear() - anoNascimento;
+
+ 		mesNascimento--;//tira 1 porque os meses começam em 0 no javascript
+
+ 		//se a data nao for válida retorna 0.
+ 		if( ! validarData(dataNascimento) ){
+ 			return 0;
+ 		}
+
+ 		if( idade <= 0 ){
+ 			return idade;
+ 		}
+
+ 		//se nascer 29/02 colocar que nasceu 28/02
+ 		if( (diaNascimento == 29) && (mesNascimento ==2) ){
+ 			diaNascimento--;
+ 		}
+
+ 		if( hoje.getMonth() < mesNascimento ){
+ 			idade--;
+ 			return idade;
+ 		}
+
+ 		if( (hoje.getMonth() == mesNascimento) && (hoje.getDate() < diaNascimento) ){
+ 			idade--;
+ 			return idade;
+ 		}
+
+
+ 		return idade;
+
+ 	}
+
+
+ 	var dataTeste = "26/02/1990";
+
+ 	console.log("idade final: "+ calcularIdade(dataTeste));
+
+    //console.log(teste.getDate());//dia do mes
+	//console.log(teste.getFullYear());//ano 9999
+
+// calula idade
+//https://codepen.io/tipsoftheday/pen/hwFde
+
+    
+
+
+    
+</script>
+<html>
+    <body>
+        
+    </body>
+</html>

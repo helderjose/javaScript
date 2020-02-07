@@ -1,0 +1,40 @@
+<html>
+    <body>
+        <script type="text/javascript">
+            var tabuadaDo = "";
+            var multiplicando = 0;
+            var pontuacao = 0;
+            var resposta = "";
+            
+            //verificando se o usuário digitou um número válido
+            do{
+                tabuadaDo = prompt("Digite a tabuada desejada!");
+                if(isNaN(tabuadaDo) || (tabuadaDo == "")){
+                    alert(tabuadaDo+ " não é um número válido");
+                }
+            }
+            while(isNaN(tabuadaDo) || (tabuadaDo == ""));
+            //fim da verificação
+            
+            //INICIA O JOGO
+            do{
+                multiplicando ++;
+                resposta =  prompt(tabuadaDo+ " x "+ multiplicando);
+
+                if(resposta == tabuadaDo * multiplicando){
+                pontuacao ++;
+                document.write(tabuadaDo+" x "+multiplicando+ " acertou <br>");
+            }
+            else{
+                document.write(tabuadaDo+" x "+multiplicando+ " errou <br>");
+            }
+            }while(multiplicando < 10);
+            //TERMINA O JOGO
+            
+            alert("você acertou "+ pontuacao+ " reposta(s)");
+            document.write("você acertou "+ pontuacao+ " reposta(s)");
+            
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script type="text/javascript" src="utils.js"></script>
+        <script type="text/javascript">
+
+            /*var emails = ["u@gmail.com", "1@gmail.com", "user@gmail.comb", "user@gmail.com.br",
+                "usergmail.com", "user@gmail", "user@gmail.", "@gmail.com"];
+            emails.forEach(function (item, index){
+                console.log(item +": "+ validarEmail(item) );
+            });*/
+
+
+            var datasValidas = [
+              "03/04/1983", "29/02/2012"
+            ];
+            var datasInvalidas = [
+              "05/04/    ", "05/  /2016", "  /  /   ", "32/03/1998", "32/12/2001", "29/02/2013"
+            ];
+
+            console.log("Datdas validas");
+            datasValidas.forEach(function(item, index){
+                console.log(item +": "+ validarData(item));
+            });
+            console.log();
+
+            console.log("Datas invalidas");
+            datasInvalidas.forEach(function(item, index){
+                console.log(item +": "+ validarData(item));
+            });
+        </script>
+    </head>
+    <body>
+      <p>abra o console.</p>
+    </body>
+</html>

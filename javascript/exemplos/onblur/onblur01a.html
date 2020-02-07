@@ -1,0 +1,18 @@
+<script type="text/javascript">
+    function testeOnblurNome(){
+        alert("Saiu do campo nome!");
+    }
+    function testeOnblurIdade(){
+        alert("Saiu do campo idade!");
+    }
+</script>
+<html>
+    <body>
+        <h1>Exemplo onblur</h1>
+        <h3>clique em um dos campos e depois clique em algum ludar da página</h3>
+        <form name="frmExemplo" action="..." method="POST">
+           Nome: <input type="text" id="inputNome" onblur="testeOnblurNome()" /><br/>
+           Idade: <input type="text" id="inputIdade" onblur="testeOnblurIdade()" />
+        </form>
+    </body>
+</html>

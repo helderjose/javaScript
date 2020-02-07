@@ -1,0 +1,5 @@
+2017-10-25T02:00:00.000Z
+
+retornar apenas a data: 2017-10-25
+
+retornar a data usando format: 2017-10-25, 2017/10/25, 25-10-2017, 25/10/2017

@@ -1,0 +1,8 @@
+Mergin objects com assign
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+------------------------
+
+converter para boolean
+ex 0 virar false (equivalente boolean do valor 0)
+!!
+{!!userinfo && <UserInfo userinfo={userinfo}

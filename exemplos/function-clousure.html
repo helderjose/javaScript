@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script type="text/javascript">
+            function newLine(){
+                    console.log('');
+                }
+        </script>
+        <script type="text/javascript">
+
+            var helloWorld = function (){
+                var message = "Hello World";
+                return function (){
+                    return message;
+                }
+            };
+
+            console.log(helloWorld);
+            console.log(helloWorld());
+            console.log(helloWorld()());
+            newLine();
+
+            var fnHelloWorld = helloWorld();
+            console.log(fnHelloWorld());;
+
+        </script>
+
+    </head>
+    <body>
+    
+    </body>
+</html>

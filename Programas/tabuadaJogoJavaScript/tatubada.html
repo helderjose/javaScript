@@ -1,0 +1,28 @@
+<script src="funcoes.js"></script>
+<script type="text/javascript">
+    
+    var tabuadaNum;
+    var resposta;
+    var respostaCerta = 0;
+    var respostaErrada = 0;
+    var tabuadaArray = new Array(2,3,4,5,6,7,8,9);
+    
+    tabuadaArray = arrayShuffle(tabuadaArray);
+    
+    do{
+        tabuadaNum = prompt("Digite a tabuada desejada.");
+        tabuadaNum = trim(tabuadaNum);
+    }while(isNaN(tabuadaNum) || tabuadaNum == "");
+    
+    for(i = 0; i < tabuadaArray.length; i++){
+        resposta = prompt(tabuadaNum +" x "+  tabuadaArray[i]);
+        if(resposta == tabuadaNum * tabuadaArray[i]){
+            respostaCerta ++;
+        }else{
+            respostaErrada ++;
+        }
+    }
+    document.write("Certo "+ respostaCerta +"\n");
+    document.write("Errado "+ respostaErrada);
+    
+</script>

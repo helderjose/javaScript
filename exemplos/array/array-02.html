@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script type="text/javascript">
+            function newLine(){
+                    console.log('');
+                }
+        </script>
+        <script type="text/javascript">
+
+            /*
+            No JS não existe array "de verdade" como nas outras linguagens.
+            Os arrays são apenas objetos especiais que oferecem meios para acessar e manipular suas propriedades por
+            meio de índices.
+            */
+
+            function getArrayStringCarros() {
+                return ["Ka", "Corsa", "Palio", "Gol"];
+            }
+
+            function getArrayStringMotos(){
+                return ["Honda", "Yamaha"];
+            }
+
+            function getArrayObjetosCarros(){
+                return [
+                    {marca: "Ford", modelo: "Ka", preco: 28800},
+                    {marca: "Ford", modelo: "Fiesta", preco: 34750},
+                    {marca: "Ford", modelo: "Focus", preco: 32000},
+                    {marca: "Chevrolet", modelo: "Corsa", preco: 17568},
+                    {marca: "Fiat", modelo: "Palio", preco: 18900}
+                ]
+            }
+
+
+            var carros;
+            var motos;
+            carros = getArrayStringCarros();
+
+
+            console.log("valueOf()");
+            console.log(carros.valueOf());
+            newLine();
+
+            console.log("shift()"); //remove o primeiro elemento
+            console.log(carros.shift());
+            newLine();
+
+            console.log("pop()"); // remove o último elemento do array.
+            console.log(carros.pop());
+            newLine();
+
+            console.log("toString()");
+            console.log(carros.toString());
+            newLine();
+
+            console.log("length");
+            console.log(carros.length);
+            newLine();
+
+            console.log("indexOf()");
+            console.log(carros.indexOf("Corsa"));
+            newLine();
+
+            console.log("splice(position, qtdParaRemover)");
+            console.log(carros.valueOf());
+            console.log("carros.splice(1, 1)");
+            carros.splice(1, 1); //corsa
+            console.log(carros.valueOf());
+            newLine();
+
+            console.log("splice(position, qtdParaRemover, valorParaAdicionar)");
+            carros = getArrayStringCarros();
+            console.log(carros.valueOf());
+            carros.splice(carros.indexOf("Corsa"), 1, "Sonic");
+            console.log(carros.valueOf());
+
+            console.log("Usando splice() para adicionar um item");
+            carros.splice(1, 0, "Corcel");
+            console.log(carros.valueOf());
+            newLine();
+
+
+            console.log("filter()");
+            carros = getArrayObjetosCarros();
+            console.log(carros.valueOf());
+            var carrosFord = carros.filter(function (elemento) {
+                return elemento.marca === "Ford";
+            });
+            console.log(carrosFord.valueOf());
+            newLine();
+
+            // todos os elementos são da marca ford ?
+            console.log("every(): todos os elementos são da marca ford?");
+            carros = getArrayObjetosCarros();
+            var everyTeste = carros.every(function (elemento) {
+                            return elemento.marca === "Ford";
+                        });
+            console.log(everyTeste);
+            newLine();
+
+            //map: retorna um novo array com os valores desejado. Não afeta o array original.
+            console.log("map(): retorna um novo array com os valores desejado. Não afeta o array original.");
+            carros = getArrayObjetosCarros();
+            console.log(carros.valueOf());
+            var marcas = carros.map(function (elemento){
+                return elemento.marca;
+            });
+            console.log(marcas.valueOf());
+            var modelosLength = carros.map(function (elemento){
+                return elemento.marca.length;
+            });
+            console.log(modelosLength.valueOf());
+            newLine();
+
+            //reduce(elementoAnterios, elementoAtual)... comece em 0
+            /*
+            Na primeira iteração o prev é undefined, por isso passamos o 0 como segundo parâmetro de reduce.
+            */
+            console.log("reduce(elementoAnterios, elementoAtual)");
+            carros = getArrayObjetosCarros();
+            var precoTotal = carros.reduce(function (prev, cur) {
+                return prev + cur.preco;
+            }, 0);
+            console.log(precoTotal);
+            newLine();
+
+            //concat(): gera um novo array a partir de outros.
+            console.log("concat(): gera um novo array a partir de outros.");
+            carros = getArrayStringCarros();
+            motos = getArrayStringMotos();
+            var veiculos = carros.concat(motos);
+            console.log(veiculos.valueOf());
+            newLine();
+
+            //slice(): Fatia um array. Não altera o array original
+            console.log("slice(): Fatia um array. Não altera o array original");
+            console.log(carros.valueOf());
+            console.log(carros.slice(0, 2));
+            console.log(carros.slice(1, 3));
+            console.log(carros.slice(2));
+            newLine();
+
+            //reverse(): Inverte os elementos. Altera o array original
+            console.log("reverse(): Inverte os elementos. Altera o array original");
+            console.log(carros.valueOf());
+            console.log(carros.reverse().valueOf());
+            newLine();
+
+            //sort(): Ordena os elementos de um array
+            console.log("sort(): Ordena os elementos de um array");
+            carros = getArrayStringCarros();
+            console.log(carros.valueOf());
+            carros.sort();
+            console.log(carros.valueOf());
+            newLine();
+
+            carros = getArrayObjetosCarros();
+            console.log(carros.valueOf());
+            var precosOrdenacaoOriginal = carros.map(function (elemento){
+                return elemento.preco;
+            });
+            console.log(precosOrdenacaoOriginal.valueOf());
+            //ordenando por preco
+            /*
+            Se o resultado de a - b for negativo, a vem primeiro.
+            Se o resultado de a - b for positivo, b vem primeiro.
+            */
+            carros.sort(function (a, b) {
+                return a.preco - b.preco; // ordem crescente
+                return b.preco - a.preco; // ordem decrescente
+            });
+            var precosOrdenados = carros.map(function (elemento){
+                return elemento.preco;
+            });
+            console.log(precosOrdenados.valueOf());
+            newLine();
+
+
+            console.log("join(): retorna uma string com os elementos do array separado pelo caracter que for passado. Não afeta o array original");
+            carros = getArrayStringCarros();
+            console.log(carros.valueOf());
+            carros.join(";");
+            console.log(carros.join(";"));
+            newLine();
+
+            console.log("misturando conceitos: multiplicar string");
+            console.log(new Array(10).join("teste"));
+
+            /*
+            console.log();
+            console.log(carros.);
+            newLine();
+
+            console.log();
+            console.log(carros.);
+            newLine();*/
+
+        </script>
+
+    </head>
+    <body>
+    
+    </body>
+</html>

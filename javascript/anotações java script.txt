@@ -1,0 +1,38 @@
+---------------------------------------------------
+	document.write
+document é o objeto = a pagina html é um objeto do tipo documente.
+write é o método para escrever na página.
+
+document.write("digite aqui");
+----------------------------------------------
+--------------------------------------------------------
+	onload
+ é inicializado quando a página termina de carregar no navegador.
+
+onload = alert("digite aqui");
+----------------------------------------------
+--------------------------------------------
+	alert
+alert é uma caixa de mensagem.
+
+alert("digite aqui");
+--------------------------------------
+-----------------------------------------------
+	confirm
+exibe uma janela de confirmação
+
+confirm("digite aqui");
+----------------------------------
+------------------------------------------
+	prompt
+
+prompt é usado para exibir uma caixa input.
+Ele sempre retorna um valor que é null se clicar em cancelar<br/>
+ou retorna o valor que foi digitado se clicar em ok.
+
+nome = prompt("Qual seu nome?")
+---------------------------------------------
+
+----------------------------------
+var - declara uma variável.
+const - declara uma variavel constante.

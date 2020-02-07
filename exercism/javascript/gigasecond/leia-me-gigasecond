@@ -1,0 +1,11 @@
+exercism download --exercise=gigasecond --track=javascript
+exercism submit ./gigasecond.js
+
+obs: fazer testes pois começa contar do 0
+
+
+Introduction
+Calculate the moment when someone has lived for 10^9 seconds.
+A gigasecond is 10^9 (1,000,000,000) seconds.
+
+https://pine.fm/LearnToProgram/chap_09.html
