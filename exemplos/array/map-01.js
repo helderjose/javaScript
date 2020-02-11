@@ -9,5 +9,6 @@ Note: map() does not change the original array.
 
 var numbers = [4, 9, 16, 25];
 var raizesQuadradas = numbers.map(Math.sqrt);
+console.log(numbers); // [4, 9, 16, 25] - nao altera o array original
 console.log(raizesQuadradas); // [ 2, 3, 4, 5 ]
 
