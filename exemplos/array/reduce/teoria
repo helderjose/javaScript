@@ -1,0 +1,38 @@
+
+https://www.w3schools.com/jsref/jsref_reduce.asp
+
+Definition and Usage:
+The reduce() method reduces the array to a single value.
+The reduce() method executes a provided function for each value of the array (from left-to-right).
+The return value of the function is stored in an accumulator (result/total).
+Note: reduce() does not execute the function for array elements without values.
+Note: this method does not change the original array.
+
+Syntax:
+array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
+
+Parameter Values: Olhar a tabela no site.
+
+param 1:
+function(total,currentValue, index,arr)
+Required. A function to be run for each element in the array.
+
+param: 2
+initialValue 	Optional. A value to be passed to the function as the initial value
+
+Function arguments (argumentos da function do param 1):
+total 	      Required. The initialValue (segundo parâmetro do reduce), or the previously returned value of the function
+currentValue 	Required. The value of the current element
+currentIndex 	Optional. The array index of the current element
+arr 	        Optional. The array object the current element belongs to
+
+
+Nota:
+[].reduce(myFunc)
+Dá erro porque se não passar o valor inicial, reduce tenta usar
+o primeiro elemento do array.
+Precisa de pelo menos um elemento no array.
+
+[].reduce(myFunc, myVal)
+Funciona porque está passando um valor inicial.
+
