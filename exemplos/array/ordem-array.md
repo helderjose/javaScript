@@ -9,3 +9,10 @@ organizando, olhar o arquivo methods-array
 
 fazendo:
 push
+
+
+
+
+
+https://www.w3schools.com/js/js_arrays.asp
+https://www.w3schools.com/js/js_array_methods.asp
