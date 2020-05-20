@@ -19,8 +19,7 @@ Return Value: 	      A Number, representing the new length of the array
 JavaScript Version: 	ECMAScript 1
 */
 
-let carros = ["Ka", "Corsa", "Palio", "Gol"];
+let fruits = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruits.push("Kiwi", "Lemon", "Pineapple"));   // 7
+console.log(fruits);   // ["Banana", "Orange", "Apple", "Mango", "Kiwi", "Lemon", "Pineapple"]
 
-console.log(carros);
-carros.push("Saveiro", "Corcel");  // insere um elemento no fim do array
-console.log(carros);

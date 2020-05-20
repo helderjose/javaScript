@@ -8,8 +8,7 @@ https://www.w3schools.com/jsref/jsref_obj_array.asp
 organizando, olhar o arquivo methods-array
 
 fazendo:
-push
-
+map
 
 
 
