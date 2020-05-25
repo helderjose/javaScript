@@ -6,6 +6,8 @@ https://www.w3schools.com/jsref/jsref_obj_array.asp
 1. map
 1. concat
 1. copyWithin
+1. entries
+1. fill
 
 
 organizando, olhar o arquivo methods-array
@@ -13,6 +15,9 @@ organizando, olhar o arquivo methods-array
 fazendo:
 
 
-
 https://www.w3schools.com/js/js_arrays.asp
 https://www.w3schools.com/js/js_array_methods.asp
+
+
+todo:
+mudar a ordem dos elementos do array usando entries, map e etc.
