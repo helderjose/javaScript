@@ -1,0 +1,16 @@
+
+https://www.w3schools.com/jsref/jsref_copywithin.asp
+
+Definition and Usage:
+The copyWithin() method copies array elements to another position in the array, overwriting the existing values.
+This method will never add more items to the array.
+Note: this method overwrites the original array.
+
+Syntax:
+array.copyWithin(target, start, end)
+
+Parameter Values:
+Parameter 	Description
+target 	    Required. The index position to copy the elements to
+start 	    Optional. The index position to start copying elements from  (default is 0)
+end 	      Optional. The index position to stop copying elements from (default is array.length)

@@ -5,13 +5,13 @@ https://www.w3schools.com/jsref/jsref_obj_array.asp
 1. push
 1. map
 1. concat
-
+1. copyWithin
 
 
 organizando, olhar o arquivo methods-array
 
 fazendo:
-copyWithin
+
 
 
 https://www.w3schools.com/js/js_arrays.asp
