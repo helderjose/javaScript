@@ -1,3 +1,9 @@
+/dados/helder/particular/programacao2/nodeJs/nodeJs/udemy-nodeJs/section-04/n-4-12-promises
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve
+
+
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise
 
 

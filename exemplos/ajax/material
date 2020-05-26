@@ -1,0 +1,10 @@
+// In reality, you will probably be using something like XHR or an HTML5 API.
+
+XHR
+XMLHttpRequest
+
+HTML5 API
+https://www.w3schools.com/html/html5_geolocation.asp
+
+https://www.w3schools.com/js/js_ajax_intro.asp
+https://www.w3schools.com/js/js_ajax_http.asp
