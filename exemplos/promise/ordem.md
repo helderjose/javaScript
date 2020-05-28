@@ -6,3 +6,9 @@
 Fazer:
 usar promise.all, executar três funções assíncronas (e em qualquer ordem) e executar
 um bloco de código só quando as três terminarem de serem executadas,
+
+exemplo de Promise.all
+/data/helder/programacao2/javaScript/exemplos/async-await/multiple-steps-parallel.js
+
+
+Promise.all returns an array with the resolved values once all the passed-in promises have resolved.

@@ -12,6 +12,7 @@ function main () {
 /*
   Esse exemplo retorna undefined porque a
   linha 2 é executada antes do retorno do getName().
-  A promise e o async await resolve esse problema.
+  A promise e o async await resolve esse problema, veja
+  os próximos exemplos.
 */
 main();
