@@ -1,3 +1,5 @@
 await is a new operator used to wait for a promise to resolve or reject. It can
 only be used inside an async function.
 
+Async functions always return a promise, so the following may not produce the result you’re after:
+
