@@ -10,6 +10,10 @@ array.filter(function(currentValue, index, arr), thisValue)
 Parameter Values:
 parameter-values.png
 
+Technical Details:
+Return Value: 	An Array containing all the array elements that pass the test. If no elements pass the test it returns an empty array.
+JavaScript Version: 	ECMAScript 5
+
 Nota:
 [].ages retorna []
 */
@@ -27,4 +31,4 @@ function myFunction() {
   console.log(agesFiltered)
 }
 
-myFunction();
+myFunction(); // [ 32, 33, 40 ]

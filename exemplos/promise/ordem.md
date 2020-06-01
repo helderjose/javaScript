@@ -1,6 +1,8 @@
 # promise
 
 1. firstPromise
+1. declaration
+1. chaining-promises
 
 
 https://alligator.io/js/promises-es6/
@@ -16,3 +18,7 @@ exemplo de Promise.all
 
 
 Promise.all returns an array with the resolved values once all the passed-in promises have resolved.
+
+Prmise.all com reject em uma das chamadas.
+
+Prmise tratando erro de uma chamada (segundo parâmetro da promise) e outra caindo no catch

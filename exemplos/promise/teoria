@@ -1,0 +1,6 @@
+Promise
+
+Promises are a new feature in the ES6 (ES2015) JavaScript spec that allow
+you to very easily deal with asynchronous code without
+resolving to multiple levels of callback
+functions. Goodbye callback hell!
