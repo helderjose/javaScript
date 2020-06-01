@@ -3,6 +3,10 @@
 1. firstPromise
 
 
+https://alligator.io/js/promises-es6/
+https://alligator.io/js/promise-all-promise-race/
+
+
 Fazer:
 usar promise.all, executar três funções assíncronas (e em qualquer ordem) e executar
 um bloco de código só quando as três terminarem de serem executadas,
