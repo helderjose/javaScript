@@ -1,0 +1,8 @@
+let interval = setInterval(() => {
+
+        if(this.outageApiInformation.isFetched) {
+          clearInterval(interval);
+          resolve();
+        }
+
+      }, 500);

@@ -13,6 +13,10 @@ https://www.w3schools.com/jsref/jsref_obj_array.asp
 1. some
 
 
+não fiz exemplo:
+1. findindex
+1. forEach
+1. from
 
 
 organizando, olhar o arquivo methods-array

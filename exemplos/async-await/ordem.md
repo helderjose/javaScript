@@ -15,3 +15,6 @@ Olhar a pasta de exemplos de ajax
 1. runtime-or-syntax-error
 1. promise-based-api
 
+
+
+esperar-resposta

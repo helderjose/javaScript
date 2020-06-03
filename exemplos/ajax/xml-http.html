@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The XMLHttpRequest Object</h2>
+
+<p id="demo">Let AJAX change this text.</p>
+
+<button type="button" onclick="loadDoc()">Change Content</button>
+
+<script>
+  /*
+    https://www.w3schools.com/js/js_ajax_http.asp
+
+    Esse exemplo é uma chamda completa, cada linha será
+    abordada nos outros exemplos.
+  */
+  function loadDoc() {
+    let xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("demo").innerHTML = this.responseText;
+      }
+    };
+
+    xhttp.open("GET", "http://localhost:3000/ajax-info", true);
+    xhttp.send();
+  }
+</script>
+
+</body>
+</html>
