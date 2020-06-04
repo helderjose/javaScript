@@ -35,6 +35,18 @@ app.get('/ajax-info', (req, res) => {
   // res.sendFile('/data/helder/programacao2/nodejs/servers/estudos/hello/ajax_info.txt');
 });
 
+app.get('/demo-get', (req, res) => {
+  setTimeout(() => {
+    res.send(
+      `
+        <p>This content was requested using the GET method.</p>
+        <p>${ new Date() }</p>
+      `
+    );
+  }, 1000);
+  // res.sendFile('/data/helder/programacao2/nodejs/servers/estudos/hello/ajax_info.txt');
+});
+
 // app.get('/hello/ajax-info', (req, res) => {
 //   setTimeout(() => {
 //     res.sendFile(`${ __dirname }/hello/ajax_info.txt`);

@@ -1,0 +1,65 @@
+
+<!--
+  https://www.w3schools.com/js/js_ajax_http_send.asp
+
+Send a Request To a Server:
+To send a request to a server, we use the open() and send() methods of the XMLHttpRequest object:
+
+xhttp.open("GET", "ajax_info.txt", true);
+xhttp.send();
+
+Method 	                      Description
+open(method, url, async)      Specifies the type of request
+send() 	                      Sends the request to the server (used for GET)
+send(string) 	                Sends the request to the server (used for POST)
+
+
+open(method, url, async):
+  method:   the type of request: GET or POST
+  url:      the server (file) location
+  async:    true (asynchronous) or false (synchronous)
+.
+
+
+GET or POST?:
+GET is simpler and faster than POST, and can be used in most cases.
+However, always use POST requests when:
+  - A cached file is not an option (update a file or database on the server).
+  - Sending a large amount of data to the server (POST has no size limitations).
+  - Sending user input (which can contain unknown characters), POST is more robust and secure than GET.
+.
+-->
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h1>A simple GET request:</h1>
+  <h2>The XMLHttpRequest Object</h2>
+
+  <button type="button" onclick="loadDoc()">Request data</button>
+
+  <div id="demo"></div>
+
+  <script>
+    /*
+      In this example, you may get a cached result. To
+      avoid this, add a unique ID to the URL:
+      Próximo exemplo mostra como adicionar um id único à requisição.
+    */
+    function loadDoc() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("demo").innerHTML = this.responseText;
+        }
+      };
+
+      xhttp.open("GET", "http://localhost:3000/demo-get", true);
+      xhttp.send();
+    }
+  </script>
+
+</body>
+</html>
