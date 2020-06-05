@@ -32,7 +32,6 @@ app.get('/ajax-info', (req, res) => {
   setTimeout(() => {
     res.sendFile(`${ __dirname }/api/ajax-info.txt`);
   }, 1000);
-  // res.sendFile('/data/helder/programacao2/nodejs/servers/estudos/hello/ajax_info.txt');
 });
 
 app.get('/demo-get', (req, res) => {
@@ -44,7 +43,31 @@ app.get('/demo-get', (req, res) => {
       `
     );
   }, 1000);
-  // res.sendFile('/data/helder/programacao2/nodejs/servers/estudos/hello/ajax_info.txt');
+});
+
+app.get('/demo-get-send-information', (req, res) => {
+  setTimeout(() => {
+    res.send(
+      `
+        <p> Hello ${ req.query.fname  } ${ req.query.lname }</p>
+      `
+    );
+  }, 1000);
+});
+
+// em uma aplicação real use o npm install body-parser
+app.post('/demo-post', (req, res) => {
+
+  const body = [];
+
+  req.on("data", (chunck) => {
+    body.push(chunck)
+  })
+
+  req.on("end", () => {
+    const parsedBody = Buffer.concat(body).toString();
+    console.log(parsedBody);
+  });
 });
 
 // app.get('/hello/ajax-info', (req, res) => {

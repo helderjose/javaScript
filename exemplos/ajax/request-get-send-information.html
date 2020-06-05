@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h2>The XMLHttpRequest Object</h2>
+  <p>http://localhost:3000/demo-get-send-information?fname=Henry&lname=Ford</p>
+
+  <button type="button" onclick="loadDoc()">Request data</button>
+
+  <div id="demo"></div>
+
+  <script>
+    /*
+      If you want to send information with the GET method, add the information to the URL:
+
+      Query parameter: fname=Henry&lname=Ford
+    */
+    function loadDoc() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("demo").innerHTML = this.responseText;
+        }
+      };
+      xhttp.open("GET", "http://localhost:3000/demo-get-send-information?fname=Henry&lname=Ford", true);
+      xhttp.send();
+    }
+  </script>
+
+</body>
+</html>

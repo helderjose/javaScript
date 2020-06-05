@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h2>The XMLHttpRequest Object</h2>
+
+  <button type="button" onclick="loadDoc()">Request data</button>
+
+  <p id="demo"></p>
+
+  <script>
+    /*
+      To POST data like an HTML form, add an HTTP header with
+      setRequestHeader(). Specify the data you
+      want to send in the send() method:
+
+
+      Method 	                          Description
+      setRequestHeader(header, value) 	Adds HTTP headers to the request
+
+                                        header: specifies the header name
+                                        value: specifies the header value
+    */
+    function loadDoc() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("demo").innerHTML = this.responseText;
+        }
+      };
+      xhttp.open("POST", "http://localhost:3000/demo-post", true);
+      xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      xhttp.send("fname=Henry&lname=Ford");
+    }
+  </script>
+
+  </body>
+  </html>

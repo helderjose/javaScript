@@ -16,13 +16,14 @@ Abra o arquivo .html no navegador
 1. xml-http
 1. request-get-cached
 1. request-get-no-cached
+1. request-get-send-information - query parameter
 
 estou fazendo:
-1. request-get-send-information
+1. request-post
 
-estou no
+estou no:
 https://www.w3schools.com/js/js_ajax_http_send.asp
-exemplo "If you want to send information with the GET method, add the information to the URL:"
+exemplo: The url - A File On a Server
 
 
 
