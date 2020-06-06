@@ -1,2 +1,20 @@
+https://xhr.spec.whatwg.org/
+
 Introdução
 https://www.w3schools.com/js/js_ajax_intro.asp
+
+
+The url - A File On a Server
+The url parameter of the open() method, is an address to a file on a server:
+xhttp.open("GET", "ajax_test.asp", true);
+The file can be any kind of file, like .txt and .xml, or server scripting files like .asp and .php (which can perform actions on the server before sending the response back).
+
+Asynchronous - True or False?
+Server requests should be sent asynchronously.
+
+The async parameter of the open() method should be set to true:
+xhttp.open("GET", "ajax_test.asp", true);
+By sending asynchronously, the JavaScript does not have to wait for the server response, but can instead:
+  - execute other scripts while waiting for server response
+  - deal with the response after the response is ready
+.

@@ -17,13 +17,15 @@ Abra o arquivo .html no navegador
 1. request-get-cached
 1. request-get-no-cached
 1. request-get-send-information - query parameter
+1. request-post
+1. onreadystatechange-property
+1. synchronous-request
 
 estou fazendo:
-1. request-post
 
 estou no:
-https://www.w3schools.com/js/js_ajax_http_send.asp
-exemplo: The url - A File On a Server
+https://www.w3schools.com/js/js_ajax_http_response.asp
+exemplo: The onreadystatechange Property
 
 
 
