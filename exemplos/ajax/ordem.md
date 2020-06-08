@@ -20,18 +20,16 @@ Abra o arquivo .html no navegador
 1. request-post
 1. onreadystatechange-property
 1. synchronous-request
-
-estou fazendo:
-
-estou no:
-https://www.w3schools.com/js/js_ajax_http_response.asp
-exemplo: The onreadystatechange Property
-
+1. onreadystatechange-hello
+1. callback-function
+1. response-text-property
+1. response-xml-property
+1. get-all-response-readers-method
+1. get-response-header-method
 
 
 
 organizar
-// In reality, you will probably be using something like XHR or an HTML5 API.
 
 XHR
 XMLHttpRequest
@@ -39,9 +37,6 @@ XMLHttpRequest
 HTML5 API
 https://www.w3schools.com/html/html5_geolocation.asp
 
-https://www.w3schools.com/js/js_ajax_intro.asp
-https://www.w3schools.com/js/js_ajax_http.asp
-
-
 fetch API
 https://alligator.io/js/fetch-api#fetch--asyncawait
+

@@ -1,4 +1,7 @@
+Links:
 https://xhr.spec.whatwg.org/
+https://www.w3schools.com/js/js_ajax_intro.asp
+https://www.w3schools.com/js/js_ajax_http.asp
 
 Introdução
 https://www.w3schools.com/js/js_ajax_intro.asp
@@ -18,3 +21,14 @@ By sending asynchronously, the JavaScript does not have to wait for the server r
   - execute other scripts while waiting for server response
   - deal with the response after the response is ready
 .
+
+
+Server Response Properties:
+Property 	        Description
+responseText 	    get the response data as a string
+responseXML 	    get the response data as XML data
+
+Server Response Methods:
+Method 	                      Description
+getResponseHeader() 	        Returns specific header information from the server resource
+getAllResponseHeaders() 	    Returns all the header information from the server resource

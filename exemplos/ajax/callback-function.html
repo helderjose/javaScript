@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <div id="demo">
+
+    <h2>The XMLHttpRequest Object</h2>
+
+    <button type="button" onclick="loadDoc('http://localhost:3000/ajax-info', myFunction)">Change Content
+    </button>
+  </div>
+
+  <script>
+    /*
+      Using a Callback Function:
+      A callback function is a function passed as a parameter to another function.
+      If you have more than one AJAX task in a website, you should create one function for executing the XMLHttpRequest object, and one callback function for each AJAX task.
+      The function call should contain the URL and what function to call when the response is ready.
+    */
+    function loadDoc(url, cFunction) {
+      console.log("loadDoc() -> quando clica no botão chama essa")
+      var xhttp;
+      xhttp=new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          cFunction(this);
+        }
+      };
+      xhttp.open("GET", url, true);
+      xhttp.send();
+    }
+
+    // essa está sendo passada como callback function
+    function myFunction(xhttp) {
+      console.log("myFunction() -> essa está sendo passada como callback function")
+      document.getElementById("demo").innerHTML = xhttp.responseText;
+    }
+  </script>
+</body>
+</html>

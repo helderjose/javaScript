@@ -34,6 +34,12 @@ app.get('/ajax-info', (req, res) => {
   }, 1000);
 });
 
+app.get('/cd-catalog', (req, res) => {
+  setTimeout(() => {
+    res.sendFile(`${ __dirname }/files/cd-catalog.xml`);
+  }, 1000);
+});
+
 app.get('/demo-get', (req, res) => {
   setTimeout(() => {
     res.send(
