@@ -3,6 +3,7 @@
 1. firstPromise
 1. declaration
 1. chaining-promises
+1. ...programacao2/javaScript/exemplos/async-await
 
 
 https://alligator.io/js/promises-es6/
