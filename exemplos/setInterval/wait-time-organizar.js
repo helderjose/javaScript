@@ -1,26 +1,37 @@
 /*
  Obs: Conta o progresso do intervalo de tempo informado.
+ Indicado para usar quando quiser exibir a porcentagem
+ do tempo esperado sem requisição ajax. Para ajax tem um
+ exemplo na pasta de async-await
  Ex:
- timeToWait = 5000, conta a porcentagem do tempo de 5 segundos.
+ timeToWait = 5000, conta a porcentagem do tempo de 5 segundos
+ inde um em um por cento.
 */
+ console.time();
 
-let timeToWait = 15000;
-let onePercent = timeToWait / 100;
+const TIME_TO_WAIT = 2000;
+const ONE_PERCENT = TIME_TO_WAIT / 100;
 let progressPercentage = 0;
 
-// para imprimir quando o timeToWait for muito grande.
-console.log(progressPercentage + "%");
-progressPercentage++;
+// para imprimir o 0% quando o timeToWait for muito grande.
+updateInformation();
 
 let myInterval = setInterval(() => {
-
-  console.log(progressPercentage + "%");
-  progressPercentage++;
+  updateInformation();
 
   if(progressPercentage > 100) {
-    clearInterval(myInterval)
+    clearInterval(myInterval);
+    console.timeEnd();
   }
-}, onePercent);
+
+}, ONE_PERCENT);
+
+function updateInformation() {
+  console.log(progressPercentage + "%");
+  progressPercentage++;
+}
+
+
 
 
 
