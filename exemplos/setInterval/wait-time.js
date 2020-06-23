@@ -3,7 +3,7 @@
  dá para perceber um certo padrão de repetição.
 */
 
-let timeToWait = 70000;
+let timeToWait = 15000;
 let feedbackSpeedy = 500;
 let counter = 0;
 let currentFeedback = 0;
