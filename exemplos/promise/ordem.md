@@ -3,7 +3,7 @@
 1. firstPromise
 1. declaration
 1. chaining-promises
-1. ...programacao2/javaScript/exemplos/async-await
+1. async-await  - na pasta async-await
 
 
 https://alligator.io/js/promises-es6/
@@ -15,7 +15,7 @@ usar promise.all, executar três funções assíncronas (e em qualquer ordem) e 
 um bloco de código só quando as três terminarem de serem executadas,
 
 exemplo de Promise.all
-/data/helder/programacao2/javaScript/exemplos/async-await/multiple-steps-parallel.js
+javaScript/exemplos/async-await/multiple-steps-parallel.js
 
 
 Promise.all returns an array with the resolved values once all the passed-in promises have resolved.
@@ -23,3 +23,6 @@ Promise.all returns an array with the resolved values once all the passed-in pro
 Prmise.all com reject em uma das chamadas.
 
 Prmise tratando erro de uma chamada (segundo parâmetro da promise) e outra caindo no catch
+
+Fazer:
+promiseA, promiseB, usar promise.all e simular erro em uma delas (fazer teste de várias situações)
