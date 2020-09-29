@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <!-- resultado -->
+    <!-- <a href="http://www.google.com" title="ir para o google">Acessar o Google</a> -->
+  </div>
+
+  <script>
+    let linkElement = document.createElement('a');
+    let textElement = document.createTextNode('Acessar o Google');
+    let containerElement = document.querySelector('#app')
+
+    linkElement.setAttribute('href', "http://www.google.com");
+    linkElement.setAttribute('title', "ir para o google");
+    linkElement.appendChild(textElement);
+    containerElement.appendChild(linkElement);
+
+  </script>
+</body>
+</html>
